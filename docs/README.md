@@ -20,7 +20,7 @@ With this extension, users will be able to:
 
 ### Wireframes
 
-![wireframes](./docs/wireframes/chrome-extension.png)
+![wireframes](wireframes/chrome-extension.png)
 
 ### Technologies & Technical Challenges
 
