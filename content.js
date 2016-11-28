@@ -1,31 +1,22 @@
 // alert("hello!");
-const TEST_RESPONSE = [
-  'a kind of fruit',
-  'something you eat',
-  "it's normally red",
-  'a major food in the world']
 
-// when double click on a word show it in a window
+// when double click on a word show def's in a window
 document.addEventListener('dblclick', function() {
   var selectedStr = window.getSelection().toString();
   // make an ajax request to get definition
   sendRequest(selectedStr);
-  // console.log(definitionResponse);
-  // console.log(definitionResponse);
-  // div.textContent = definitionResponse;
-  // div.style.display = 'block'; //
   ul.style.display = 'block';
 });
 
-
+// close window and remove li's when click
 document.addEventListener('click', function() {
-    // div.style.display = 'none';
     ul.style.display = 'none';
     while (ul.hasChildNodes()) {
     ul.removeChild(ul.lastChild);
     }
 });
 
+// Inject un-order list to hold li's
 var ul = document.createElement('ul');
 ul.className = "def-popup";
 ul.rel = 'stylesheet';
@@ -33,18 +24,27 @@ ul.type = 'text/css';
 ul.href = chrome.runtime.getURL('window.css');
 document.body.appendChild(ul);
 
+//  Inject google font ref (Keep getting security issues)
+// const fontRef = document.createElement('link');
+// fontRef.rel = "stylesheet";
+// fontRef.href = chrome.runtime.getURL('google_font.css');
+// document.head.appendChild(fontRef);
 
 function fetchDefinitions(data) {
-  const definitions = data.list;
-  console.log(data.list);
+  const definitions = data.list
+  // set default def if not def found
+  if (definitions.length == 0) {
+    definitions.push({definition: "No Definitions"});
+  };
+
   for (i in definitions) {
     var li = document.createElement('li');
     li.textContent = definitions[i].definition;
     ul.appendChild(li);
-  }
+  };
 }
 
-function sendRequest(word, success) {
+function sendRequest(word) {
   return ($.ajax({
   url: 'https://mashape-community-urban-dictionary.p.mashape.com/define?term=' + word,
   type: 'GET',

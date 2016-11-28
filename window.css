@@ -2,9 +2,10 @@
   display: none;
   position: fixed;
   top: 0;
-  right: 0;
-  width: 200px;
-  /*height:*/
+  right: 10px;
+  width: 300px;
+  height: auto;
+  max-height: 400px;
   background-color: white;
   color: black;
   margin: 0px;
@@ -13,8 +14,18 @@
   border-radius: 5px;
   text-align: center;
   list-style: none;
+  overflow: auto;
   z-index: 1000;
 }
+
+.def-popup li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid green;
+}
+
+
+
 
 
 /*def-popup {
