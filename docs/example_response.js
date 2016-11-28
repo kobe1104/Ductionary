@@ -1,12 +1,3 @@
-HTTP/1.1 200 OK
-Cache-Control: private
-Connection: keep-alive
-Content-Length: 6272
-Content-Type: application/json; charset=utf-8
-Date: Tue, 22 Nov 2016 16:08:20 GMT
-Server: Mashape/5.0.6
-Via: 1.1 vegur
-X-License: http://api.urbandictionary.com/
 
 {
   "tags": [

@@ -1,11 +1,13 @@
 // alert("hello!");
 
-// when double click on a word show def's in a window
-document.addEventListener('dblclick', function() {
-  var selectedStr = window.getSelection().toString();
-  // make an ajax request to get definition
-  sendRequest(selectedStr);
-  ul.style.display = 'block';
+// when double clicking & holding alt on a word show def's in a window
+document.addEventListener('dblclick', function(event) {
+  if (event.altKey) {
+    const selectedStr = window.getSelection().toString();
+    // make an ajax request to get definition
+    sendRequest(selectedStr);
+    ul.style.display = 'block';
+  }
 });
 
 // close window and remove li's when click
@@ -17,7 +19,7 @@ document.addEventListener('click', function() {
 });
 
 // Inject un-order list to hold li's
-var ul = document.createElement('ul');
+const ul = document.createElement('ul');
 ul.className = "def-popup";
 ul.rel = 'stylesheet';
 ul.type = 'text/css';
@@ -38,7 +40,7 @@ function fetchDefinitions(data) {
   };
 
   for (i in definitions) {
-    var li = document.createElement('li');
+    const li = document.createElement('li');
     li.textContent = definitions[i].definition;
     ul.appendChild(li);
   };
