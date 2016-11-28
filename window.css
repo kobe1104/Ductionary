@@ -1,8 +1,56 @@
 .def-popup {
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  width: 200px;
+  /*height:*/
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding: 0px;
   border: 2px solid black;
-  width: auto;
-
+  border-radius: 5px;
+  text-align: center;
+  list-style: none;
+  z-index: 1000;
 }
+
+
+/*def-popup {
+  font-size: normal;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+
+  text-align: left;
+  text-indent: none;
+  text-transform: none;
+  text-decoration: none;
+  white-space: none;
+  word-spacing: none;
+  letter-spacing: none;
+  line-height: 1.2em;
+
+  background-color: white !important;
+  color: black !important;
+
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: none;
+
+  position: relative;
+  display: block;
+  overflow: show;
+  float: none;
+  clear: none;
+  opacity: 1;
+  visibility: visible;
+  list-style: none;
+
+  -webkit-box-shadow: none;
+
+  -webkit-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}*/
