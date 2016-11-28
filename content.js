@@ -18,6 +18,8 @@ document.addEventListener('click', function() {
     }
 });
 
+
+
 // Inject un-order list to hold li's
 const ul = document.createElement('ul');
 ul.className = "def-popup";
@@ -27,10 +29,10 @@ ul.href = chrome.runtime.getURL('window.css');
 document.body.appendChild(ul);
 
 //  Inject google font ref (Keep getting security issues)
-// const fontRef = document.createElement('link');
-// fontRef.rel = "stylesheet";
-// fontRef.href = chrome.runtime.getURL('google_font.css');
-// document.head.appendChild(fontRef);
+const fontRef = document.createElement('link');
+fontRef.rel = "stylesheet";
+fontRef.href = "https://fonts.googleapis.com/css?family=Open+Sans";
+document.head.appendChild(fontRef);
 
 function fetchDefinitions(data) {
   const definitions = data.list

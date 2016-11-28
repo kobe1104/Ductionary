@@ -2,26 +2,30 @@
   display: none;
   position: fixed;
   top: 0;
-  right: 5px;
+  right: 15px;
   width: 300px;
   height: auto;
   max-height: 400px;
-  background-color: white;
+  background-color: #f3ffc4;
+  box-shadow: 10px 10px 5px #888888;
   color: black;
   margin: 0px;
-  padding: 0px;
+  padding: 10px;
   border: 2px solid black;
-  border-radius: 5px;
-  text-align: center;
+  border-radius: 10px;
+  text-align: left;
   list-style: none;
   overflow: auto;
+  font-size: 13px;
   z-index: 1000;
 }
 
 .def-popup li {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid black;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Ubuntu', sans-serif;  
 }
 
 
