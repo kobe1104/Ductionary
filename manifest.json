@@ -24,7 +24,6 @@
     "48": "icons/chrome_icon48.png",
     "128": "icons/chrome_icon128.png"
   },
-  "background": { "scripts": ["background.js"] },
 
   "permissions": [
     "tabs",
