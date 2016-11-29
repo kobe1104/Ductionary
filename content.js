@@ -9,18 +9,17 @@ document.addEventListener('dblclick', function(event) {
   }
 });
 
-// close window and remove li's when click
-document.addEventListener('click', function() {
+// close window and remove li's when clicking outside of the window
+$('body').click(function(event) {
+  if (!$(event.target).is('.def-popup')
+  && !$(event.target).parents().is(".def-popup")) {
     ul.style.display = 'none';
     while (ul.hasChildNodes()) {
-    ul.removeChild(ul.lastChild);
+      ul.removeChild(ul.lastChild);
     }
+  }
 });
 
-// document.getElementsByClassName('def-popup').addEventListener('click', function(e) {
-//   console.log(e);
-//   // e.stopPropagation();
-// });
 
 // Inject un-order list to hold li's
 const ul = document.createElement('ul');
@@ -30,12 +29,13 @@ ul.type = 'text/css';
 ul.href = chrome.runtime.getURL('window.css');
 document.body.appendChild(ul);
 
-//  Inject google font ref (Keep getting security issues)
+//  Inject google font ref
 const fontRef = document.createElement('link');
 fontRef.rel = "stylesheet";
 fontRef.href = "https://fonts.googleapis.com/css?family=Open+Sans";
 document.head.appendChild(fontRef);
 
+// update ul with lists of def's
 function fetchDefinitions(data) {
   const definitions = data.list
   // set default def if not def found
@@ -50,6 +50,8 @@ function fetchDefinitions(data) {
   };
 }
 
+
+// Make ajax request to get def's
 function sendRequest(word) {
   return ($.ajax({
   url: 'https://mashape-community-urban-dictionary.p.mashape.com/define?term=' + word,
