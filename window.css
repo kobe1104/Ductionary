@@ -23,9 +23,11 @@
 .def-popup li {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid black;
+  border-bottom: 1px dashed black;
+  padding-bottom: 5px;
+  padding-top: 5px;
   /*font-family: 'Open Sans', sans-serif;*/
-  font-family: 'Ubuntu', sans-serif;  
+  font-family: 'Ubuntu', sans-serif;
 }
 
 

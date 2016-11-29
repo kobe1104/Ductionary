@@ -1,10 +1,10 @@
-## QuickDic
+##Ductionary
 
 ### Background
 
 
 Going back and forth between the webpage you are reading and Google translate can be annoying and a waste of your time.
-QuickDic is designed and created to solve this problem. This Chrome extension allows users to get the definition of any words by simply double clicking on them.
+Ductionary is designed and created to solve this problem. This Chrome extension allows users to get the definition of any words by simply double clicking on them.
 Like the definitions if you are satisfied with it by giving it a thumb-up or thumb-down if you feel the opposite.
 
 This extension will be powered by <a href="http://www.urbandictionary.com/">Urban Dictionary</a>
@@ -14,7 +14,6 @@ This extension will be powered by <a href="http://www.urbandictionary.com/">Urba
 With this extension, users will be able to:
 
 - [ ] See a popup window with word definitions by double clicking the words,
-- [ ] Rate definitions by clicking on thumb-up or thumb-down to dislike,
 - [ ] Close the window by clicking anywhere else.
 
 

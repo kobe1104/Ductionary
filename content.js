@@ -1,4 +1,3 @@
-// alert("hello!");
 
 // when double clicking & holding alt on a word show def's in a window
 document.addEventListener('dblclick', function(event) {
@@ -18,7 +17,10 @@ document.addEventListener('click', function() {
     }
 });
 
-
+// document.getElementsByClassName('def-popup').addEventListener('click', function(e) {
+//   console.log(e);
+//   // e.stopPropagation();
+// });
 
 // Inject un-order list to hold li's
 const ul = document.createElement('ul');
