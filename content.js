@@ -20,7 +20,6 @@ $('body').click(function(event) {
   }
 });
 
-
 // Inject un-order list to hold li's
 const ul = document.createElement('ul');
 ul.className = "def-popup";

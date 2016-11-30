@@ -1,10 +1,8 @@
 {
   "manifest_version": 2,
-
   "name": "Ductionary",
-  "description": "Provides urban definitions of English words by double clicking words on any web pages while holding 'Alt' key.",
+  "description": "Provides urban dictionary definitions of English words by double clicking words on any web page while holding 'Alt' key.",
   "version": "1.0",
-
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
@@ -14,7 +12,6 @@
       "all_frames": true
     }
   ],
-
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "Ductionary"
@@ -24,7 +21,6 @@
     "48": "icons/chrome_icon48.png",
     "128": "icons/chrome_icon128.png"
   },
-
   "permissions": [
     "tabs",
     "activeTab",
