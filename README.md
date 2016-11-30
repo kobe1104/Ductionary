@@ -19,4 +19,4 @@ To look up a word, simply double click on any word on the web page while holding
 
 - Gives user definitions of any word they choose while browsing on internet!
 
-![sample](docs/wireframes/demo.png)
+![sample](docs/wireframes/demo_2.png)
