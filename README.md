@@ -14,7 +14,9 @@ To look up a word, simply double click on any word on the web page while holding
 
 ### Easy Installation
 - Simply click on 'Add extension' in the installing page(link above)!
+
 ### Provide Definitions
+
 - Gives user definitions of any word they choose while browsing on internet!
 
 ![sample](docs/wireframes/demo.png)
